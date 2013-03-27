@@ -22,7 +22,7 @@ if(! class_exists('BFL_Backup')) {
 		public function option_header() {
 
 			$output = '<h2>' . __( 'Backup Manager', 'bfl' ) . '</h2>';
-			$output .= '<p>' . sprintf(__( 'Note This is only to backup options framework theme options by %s'), '<a href="https://github.com/devinsays/options-framework-theme">Devin</a>' ) . '</p>';
+			$output .= '<p>' . sprintf(__( 'Note This is only to backup options framework theme options by %s', 'bfl'), '<a href="https://github.com/devinsays/options-framework-theme">Devin</a>' ) . '</p>';
 			return $output;
 		}
 		
