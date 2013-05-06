@@ -51,7 +51,7 @@ if(! class_exists('BFL_Backup')) {
 
 					$file_size = $_FILES["import"]["size"];
 
-					if ( ($file_ext === "json") && ( $file_type === 'text/json' ) && ($file_size < 500000) ) {
+					if ( ($file_ext === "json") && ( $file_type === 'application/json' ) && ($file_size < 500000) ) {
 
 
 						$url = wp_nonce_url('admin.php?page=bfl_backup', 'bfl-backup-import');
@@ -162,7 +162,7 @@ if(! class_exists('BFL_Backup')) {
 				
 				ob_clean();
 				echo $json_file;
-				header("Content-Type: text/json; charset=" . get_option( "blog_charset"));
+				header("Content-Type: application/json; charset=" . get_option( "blog_charset"));
 				header("Content-Disposition: attachment; filename=$json_name.json");
 
 				exit();
