@@ -4,6 +4,7 @@ if(! class_exists('BFL_Backup')) {
 	class BFL_Backup {
 		
 		public function __construct () {
+			ob_start();
 			if ( current_user_can( 'edit_theme_options' ) ) {
 				add_action( 'admin_menu', array(&$this, 'add_page'));
 			}
